@@ -22,7 +22,7 @@ void servo_init(void) {
 //init timer
 	TIM_TimeBaseStructInit(&timer);
 	timer.TIM_Prescaler = PRESCALER;
-	timer.TIM_Period = SYSCLK / PRESCALER / 50;
+	timer.TIM_Period = SYSCLK / PRESCALER / 800;
 	timer.TIM_ClockDivision = 0;
 	timer.TIM_CounterMode = TIM_CounterMode_Up;
 	TIM_TimeBaseInit(TIM4, &timer);
